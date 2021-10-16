@@ -4,12 +4,20 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "scss": "sass assets/scss/main.scss assets/css/styles.css",
+    "start": "npm run lite",
+    "lite": "lite-server",
+    "watch:scss": "onchange 'assets/**/*.scss' -- npm run scss"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "bootstrap": "^4.6.0"
+    "bootstrap": "^4.6.0",
+    "lite-server": "^2.6.1",
+    "onchange": "^7.0.0"
+  },
+  "devDependencies": {
+    "sass": "^1.43.2"
   }
 }

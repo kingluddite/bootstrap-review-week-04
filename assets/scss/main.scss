@@ -1,0 +1,16 @@
+$color-primary: tomato;
+$color-pale: green;
+h1 {
+    color: $color-primary;
+}
+
+p.special {
+    color: $color-pale;
+}
+
+header {
+    h2 {
+      color: $color-pale;
+    }
+  }
+  
