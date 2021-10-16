@@ -7,17 +7,28 @@
     "scss": "sass assets/scss/main.scss assets/css/styles.css",
     "start": "npm run lite",
     "lite": "lite-server",
-    "watch:scss": "onchange 'assets/**/*.scss' -- npm run scss"
+    "watch:scss": "onchange 'assets/**/*.scss' -- npm run scss",
+    "clean": "rimraf dist",
+    "usemin": "usemin index.html -d dist --htmlmin -o dist/index.html",
+    "copyfonts": "copyfiles -f node_modules/font-awesome/fonts/* dist/fonts",
+    "imagemin": "imagemin assets/img/* -o dist/assets/img",
+    "build": "npm run clean && npm run imagemin && npm run copyfonts && npm run usemin"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
     "bootstrap": "^4.6.0",
+    "font-awesome": "^4.7.0",
+    "imagemin-cli": "^7.0.0",
     "lite-server": "^2.6.1",
-    "onchange": "^7.0.0"
+    "onchange": "^7.0.0",
+    "usemin-cli": "^0.6.0"
   },
   "devDependencies": {
-    "sass": "^1.43.2"
+    "copyfiles": "^2.4.1",
+    "rimraf": "^3.0.2",
+    "sass": "^1.43.2",
+    "usemin": "^0.6.0"
   }
 }
